@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive CV search experience for Aarye Premathilaka's application as Informatiker Applikationsentwicklung EFZ."
+    />
+    <title>Aarye Search | Interactive CV</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro-screen" id="introScreen" aria-labelledby="introTitle">
+        <nav class="visual-nav" aria-label="Visual section labels">
+          <span>About</span>
+          <span>Projects</span>
+          <span>Skills</span>
+          <span>Contact</span>
+        </nav>
+
+        <div class="intro-content">
+          <p class="eyebrow">Interactive application CV</p>
+          <h1 class="custom-logo" id="introTitle" aria-label="Aarye Search">
+            <span class="blue">A</span><span class="red">a</span><span class="yellow">r</span><span class="blue">y</span><span class="green">e</span>
+            <span class="red">S</span><span class="yellow">e</span><span class="blue">a</span><span class="green">r</span><span class="red">c</span><span class="blue">h</span>
+          </h1>
+
+          <div class="search-card" aria-live="polite">
+            <div class="search-bar" role="search" aria-label="Animated CV search query">
+              <span class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M9.8 17.6a7.8 7.8 0 1 1 5.4-2.2l4.2 4.2-1.4 1.4-4.2-4.2a7.8 7.8 0 0 1-4 1.1Zm0-2a5.8 5.8 0 1 0 0-11.6 5.8 5.8 0 0 0 0 11.6Z" />
+                </svg>
+              </span>
+              <input
+                id="searchInput"
+                class="search-input"
+                type="text"
+                readonly
+                aria-readonly="true"
+                tabindex="-1"
+                value=""
+              />
+              <button class="search-button" id="searchButton" type="button" hidden>
+                Search CV
+              </button>
+            </div>
+
+            <div class="status-panel" id="statusPanel" aria-live="polite" aria-atomic="true">
+              <span class="status-text" id="statusText"></span>
+              <span class="loading-dots" id="loadingDots" hidden aria-hidden="true">
+                <i></i><i></i><i></i>
+              </span>
+            </div>
+          </div>
+
+          <p class="disclaimer">
+            A custom CV experience inspired by search interfaces — not an official Google website.
+          </p>
+        </div>
+      </section>
+
+      <section class="cv-screen" id="cvScreen" hidden aria-labelledby="cvTitle">
+        <div class="cv-container">
+          <p class="result-label">Result found</p>
+          <h2 id="cvTitle">Aarye Premathilaka – CV</h2>
+          <p class="cv-intro">
+            Placeholder structure for the full interactive CV. Real content can be added section by section.
+          </p>
+
+          <div class="cv-grid">
+            <article class="cv-section"><h3>Profile</h3><p>Add a concise personal profile here.</p></article>
+            <article class="cv-section"><h3>Education</h3><p>Add school, apprenticeship goals, and relevant learning path.</p></article>
+            <article class="cv-section"><h3>Skills</h3><p>Add programming languages, tools, and soft skills.</p></article>
+            <article class="cv-section"><h3>Projects</h3><p>Add selected application development projects.</p></article>
+            <article class="cv-section"><h3>Certificates</h3><p>Add certificates, courses, or achievements.</p></article>
+            <article class="cv-section"><h3>Contact</h3><p>Add email, phone, portfolio, or LinkedIn details.</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
