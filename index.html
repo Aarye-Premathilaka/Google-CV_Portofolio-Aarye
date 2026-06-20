@@ -5,66 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Interactive CV search experience for Aarye Premathilaka's application as Informatiker Applikationsentwicklung EFZ."
+      content="Google-inspired interactive CV search experience for Aarye Premathilaka's application as Informatiker Applikationsentwicklung EFZ."
     />
-    <title>Aarye Search | Interactive CV</title>
+    <title>Aarye Premathilaka | CV Search</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app-shell">
       <section class="intro-screen" id="introScreen" aria-labelledby="introTitle">
-        <nav class="visual-nav" aria-label="Visual section labels">
-          <span>About</span>
-          <span>Projects</span>
-          <span>Skills</span>
-          <span>Contact</span>
-        </nav>
-
         <div class="intro-content">
-          <p class="eyebrow">Interactive application CV</p>
           <h1 class="custom-logo" id="introTitle" aria-label="Aarye Search">
             <span class="blue">A</span><span class="red">a</span><span class="yellow">r</span><span class="blue">y</span><span class="green">e</span>
             <span class="red">S</span><span class="yellow">e</span><span class="blue">a</span><span class="green">r</span><span class="red">c</span><span class="blue">h</span>
           </h1>
 
-          <div class="search-card" aria-live="polite">
-            <div class="search-bar" role="search" aria-label="Animated CV search query">
-              <span class="search-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M9.8 17.6a7.8 7.8 0 1 1 5.4-2.2l4.2 4.2-1.4 1.4-4.2-4.2a7.8 7.8 0 0 1-4 1.1Zm0-2a5.8 5.8 0 1 0 0-11.6 5.8 5.8 0 0 0 0 11.6Z" />
-                </svg>
-              </span>
-              <input
-                id="searchInput"
-                class="search-input"
-                type="text"
-                readonly
-                aria-readonly="true"
-                tabindex="-1"
-                value=""
-              />
-              <button class="search-button" id="searchButton" type="button" hidden>
-                Search CV
-              </button>
-            </div>
+          <form class="search-form" id="searchForm" role="search" aria-label="Search for the best CV candidate">
+            <label class="sr-only" for="searchInput">Search query</label>
+            <input
+              id="searchInput"
+              class="search-input"
+              type="search"
+              autocomplete="off"
+              spellcheck="false"
+              value=""
+            />
+            <button class="search-button" id="searchButton" type="submit" aria-label="Search CV">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <path d="M9.7 17.4a7.7 7.7 0 1 1 5.42-2.23l4.36 4.35-1.95 1.95-4.35-4.36a7.66 7.66 0 0 1-3.48.29Zm0-2.75a4.95 4.95 0 1 0 0-9.9 4.95 4.95 0 0 0 0 9.9Z" />
+              </svg>
+            </button>
+          </form>
 
-            <div class="status-panel" id="statusPanel" aria-live="polite" aria-atomic="true">
-              <span class="status-text" id="statusText"></span>
-              <span class="loading-dots" id="loadingDots" hidden aria-hidden="true">
-                <i></i><i></i><i></i>
-              </span>
-            </div>
+          <div class="status-panel" id="statusPanel" aria-live="polite" aria-atomic="true">
+            <span class="status-text" id="statusText"></span>
+            <span class="loading-dots" id="loadingDots" hidden aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
           </div>
 
           <p class="disclaimer">
-            A custom CV experience inspired by search interfaces — not an official Google website.
+            A custom CV project inspired by clean search homepages — not an official Google website.
           </p>
         </div>
       </section>
 
       <section class="cv-screen" id="cvScreen" hidden aria-labelledby="cvTitle">
         <div class="cv-container">
-          <p class="result-label">Result found</p>
+          <p class="result-label">Best match found</p>
           <h2 id="cvTitle">Aarye Premathilaka – CV</h2>
           <p class="cv-intro">
             Placeholder structure for the full interactive CV. Real content can be added section by section.
